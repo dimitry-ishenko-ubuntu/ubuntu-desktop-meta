@@ -1,0 +1,62 @@
+#!/bin/bash
+
+die() { echo "$@"; exit 1; }
+
+source colors    || die "Missing colors package"
+source read_bool || die "Missing read_bool package"
+
+####################
+confirm()
+{
+    notice -n "$1"; read_bool "" y || return 1
+
+    if [[ -f "$2" ]]; then
+        warn -n "File"; echo -n " $2 "; warn -n "already exists. Overwrite?"
+        read_bool "" n || return
+    fi
+
+    mkdir -p $(dirname "$2") || die
+}
+
+rename()
+{
+    if [[ -e "$1" && ! -e "$2" ]]; then
+        notice -n "Rename"; echo -n " $1 "; notice -n "to"; echo -n " $2?"
+        read_bool "" y && mv "$1" "$2"
+    fi
+}
+
+remove()
+{
+    if [[ -d "$1" ]]; then
+        notice -n "Remove"; echo -n " $1?"; read_bool "" y && rm -r "$1"
+    fi
+}
+
+####################
+user_dirs="$HOME/.config/user-dirs.dirs"
+if confirm "Install custom user dirs?" "$user_dirs"; then
+    cat <<EOF > "$user_dirs"
+XDG_DESKTOP_DIR="$HOME/desktop"
+XDG_DOWNLOAD_DIR="$HOME/download"
+XDG_TEMPLATES_DIR="$HOME/"
+XDG_PUBLICSHARE_DIR="$HOME/"
+XDG_DOCUMENTS_DIR="$HOME/arch"
+XDG_MUSIC_DIR="$HOME/audio"
+XDG_PICTURES_DIR="$HOME/image"
+XDG_VIDEOS_DIR="$HOME/video"
+EOF
+
+    rename "$HOME/Desktop"   "$HOME/desktop"
+    rename "$HOME/Documents" "$HOME/arch"
+    rename "$HOME/Downloads" "$HOME/download"
+    rename "$HOME/Music"     "$HOME/audio"
+    rename "$HOME/Pictures"  "$HOME/image"
+    remove "$HOME/Public"
+    remove "$HOME/Templates"
+    rename "$HOME/Videos"    "$HOME/video"
+fi
+
+####################
+notice -n "Enable Alt+Tab across all workspaces?"
+read_bool "" y && gsettings set org.gnome.shell.window-switcher current-workspace-only false
