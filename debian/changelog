@@ -1,5 +1,7 @@
-ubuntu-desktop-meta (2.0) UNRELEASED; urgency=medium
+ubuntu-desktop-meta (2.0) unstable; urgency=medium
 
-  * Initial Release.
+  * Add Debian package
+  * Add blurb
+  * Add license
 
- -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Thu, 08 Apr 2021 18:15:24 -0400
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Sun, 03 Dec 2023 15:56:51 -0500
