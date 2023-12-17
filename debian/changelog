@@ -1,3 +1,9 @@
+ubuntu-desktop-meta (2.2) unstable; urgency=medium
+
+  * rhythmbox is hardly used
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Sat, 16 Dec 2023 19:36:43 -0500
+
 ubuntu-desktop-meta (2.1) unstable; urgency=medium
 
   * goldendict pulls in a lot of Qt5 deps
