@@ -1,3 +1,12 @@
+ubuntu-desktop-meta (2.3) unstable; urgency=medium
+
+  * Add copyright file
+  * Add Roboto Mono, Roboto Slab and Source Code Pro fonts
+  * Move user-setup
+  * Install stub for local.conf
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Fri, 29 Dec 2023 13:49:02 -0500
+
 ubuntu-desktop-meta (2.2) unstable; urgency=medium
 
   * rhythmbox is hardly used
