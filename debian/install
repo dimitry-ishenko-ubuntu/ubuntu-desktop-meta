@@ -1,1 +1,2 @@
-user-setup usr/bin
+local.conf etc/fonts/
+user-setup usr/bin/
