@@ -1,3 +1,9 @@
+ubuntu-desktop-meta (2.4) unstable; urgency=medium
+
+  * remmina is not very useful
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Fri, 29 Dec 2023 22:14:31 -0500
+
 ubuntu-desktop-meta (2.3) unstable; urgency=medium
 
   * Add copyright file
