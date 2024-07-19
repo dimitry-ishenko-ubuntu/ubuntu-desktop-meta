@@ -1,3 +1,9 @@
+ubuntu-desktop-meta (2.6) unstable; urgency=medium
+
+  * Depend on web-devicons-nvim
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Thu, 18 Jul 2024 23:48:37 -0400
+
 ubuntu-desktop-meta (2.5) unstable; urgency=medium
 
   * Rely on per-user font config
