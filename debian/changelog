@@ -1,3 +1,10 @@
+ubuntu-desktop-meta (2.5) unstable; urgency=medium
+
+  * Rely on per-user font config
+  * Don't install Noto fonts
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Thu, 18 Jul 2024 21:37:06 -0400
+
 ubuntu-desktop-meta (2.4) unstable; urgency=medium
 
   * remmina is not very useful
