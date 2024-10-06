@@ -1,1 +1,1 @@
-ubuntu-desktop-meta
+Ubuntu desktop meta-package

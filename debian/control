@@ -14,3 +14,4 @@ Provides: anacron
 Conflicts: anacron, apport, brltty, gnome-font-viewer, kerneloops, orca, snapd, ubuntu-report, unattended-upgrades, whoopsie
 Replaces: anacron
 Description: ubuntu-desktop-meta
+ Ubuntu desktop meta-package
