@@ -31,6 +31,7 @@ Recommends:
  fonts-liberation2,
  fonts-linuxlibertine,
  fonts-lmodern,
+ fonts-noto-emoji,
  fonts-open-sans,
  fonts-opensymbol,
  fonts-powerline,
